@@ -6,8 +6,9 @@ class EventCard extends Component {
       <div className="card">
         <div className="card-content">
           
-          <h3>Name: <span className="card-petname">Doodles</span></h3>
-          <p>Breed: Poodle</p>
+          <h3>Name: <span className="card-eventname">4th of July Parade</span></h3>
+          <p>Date: 07/04/2020</p>
+          <p>Location: Albany, New York</p>
         </div>
       </div>
     );
