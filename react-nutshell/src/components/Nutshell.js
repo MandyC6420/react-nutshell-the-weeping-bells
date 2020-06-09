@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import TaskCard from "./tasks/TaskCard";
 import './Nutshell.css'
 
 class Nutshell extends Component {
@@ -6,14 +7,19 @@ class Nutshell extends Component {
         return (
 	<div class="container-main">
 	    	<div class="section-content">
-                	<h2> <br />
-                   	 	<small> </small>
+                	<h2>Student Kennels <br />
+                   	 	<small>Loving care when you're not there. </small>
                 	</h2>
-                	<address>
+                	<address>Visit Us at the Nashville North Location
                     		 
-                    		<br />
+                    		<br />500 Puppy Way
                 	</address>
             	</div>
+				<div class="container-cards">
+          <TaskCard />
+          <TaskCard />
+          <TaskCard />
+        </div>
 	</div>
 	
         );
