@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import EventCard from "./events/EventCard"
 import TaskCard from "./tasks/TaskCard";
 import './Nutshell.css'
 import ChatCard from "./chats/ChatCard";
-// import EventCard from "./events/EventCard"
+
 
 
 class Nutshell extends Component {
@@ -21,7 +22,7 @@ class Nutshell extends Component {
 				<div class="container-cards">
           <TaskCard />
           <ChatCard />
-          {/* <EventCard /> */}
+          <EventCard />
         </div>
 
 	</div>
