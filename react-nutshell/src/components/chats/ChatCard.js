@@ -8,8 +8,8 @@ class ChatCard extends Component {
           {/* <picture>
             <img src={require('./dog.svg')} alt="My Dog" />
           </picture> */}
-          <h3>Name: <span className="card-petname">Doodles</span></h3>
-          <p>Breed: Poodle</p>
+          <h3>Name: <span className="card-petname">Suzie</span></h3>
+          <p>Message: It's awful hot, sure would like some ice cream!</p>
         </div>
       </div>
     );
