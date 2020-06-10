@@ -9,7 +9,7 @@ class TaskCard extends Component {
       <div className="card">
         <div className="card-content">
         <h3>Task: <span className="card-taskname"><button className="favorite styled"
-        type="button">
+        type="button" onClick={() => {this.props.history.push(`/tasks/${this.props.task.id}/edit`)}}>
         {this.props.task.task}</button></span></h3>
           <p>Completion by:  {this.props.task.completeBy}</p>
          <form>

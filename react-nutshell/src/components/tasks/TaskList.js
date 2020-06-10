@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import the components we will need
 import TaskCard from './TaskCard'
 import TaskManager from '../../modules/TaskManager'
+import './TaskList.css'
 
 class TaskList extends Component {
     //define what this component needs to render
@@ -32,7 +33,7 @@ render(){
 </section>
       <div className="container-cards">
         {this.state.tasks.map(task =>
-          <TaskCard key={task.id} task={task} />
+          <TaskCard key={task.id} task={task} {...this.props} />
         )}
       </div>
       </>
