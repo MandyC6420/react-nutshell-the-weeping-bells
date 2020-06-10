@@ -5,7 +5,9 @@ import ChatCard from './chats/ChatCard'
 //only include these once they are built - previous practice exercise
 import EventCard from './events/EventCard'
 import NewsCard from './news/NewsCard'
-import TaskCard from './tasks/TaskCard'
+// import TaskCard from './tasks/TaskCard'
+import TaskList from './tasks/TaskList'
+import TaskForm from './tasks/TaskForm'
 
 
 class ApplicationViews extends Component {
@@ -25,8 +27,11 @@ class ApplicationViews extends Component {
         <Route path="/news" render={(props) => {
           return <NewsCard />
         }} />
-        <Route path="/tasks" render={(props) => {
-          return <TaskCard />
+        <Route exact path="/tasks" render={(props) => {
+          return <TaskList {...props}/>
+        }} />
+        <Route path="/tasks/new" render={(props) => {
+        return <TaskForm {...props} />
         }} />
       </React.Fragment>
     )

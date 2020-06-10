@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
+//TODO import task.css when css is added
+import './TaskCard.css'
 
 class TaskCard extends Component {
   render() {
     return (
+      
       <div className="card">
         <div className="card-content">
-          {/* <picture>
-            <img src={require('./dog.svg')} alt="My Dog" />
-          </picture> */}
-          <h3>Task: <span className="card-taskname">take out the trash</span></h3>
-          <p>Completion by:  01/01/2021</p>
+        <h3>Task: <span className="card-taskname"><button className="favorite styled"
+        type="button">
+        {this.props.task.task}</button></span></h3>
+          <p>Completion by:  {this.props.task.completeBy}</p>
+         <form>
+           <label>
+             Completed:
+           <input type="checkbox" name="completed" />
+           </label>
+         </form>
         </div>
       </div>
+      
     );
   }
 }
