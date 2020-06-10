@@ -3,9 +3,12 @@ import React, { Component } from 'react'
 import Home from './home/Home'
 import ChatCard from './chats/ChatCard'
 //only include these once they are built - previous practice exercise
-import EventCard from './events/EventCard'
+import EventList from './events/EventList'
 import NewsCard from './news/NewsCard'
 import TaskCard from './tasks/TaskCard'
+import EventDetail from './events/EventDetail'
+import EventForm from './events/EventForm'
+import EventEditForm from './events/EventEditForm'
 
 
 class ApplicationViews extends Component {
@@ -19,9 +22,21 @@ class ApplicationViews extends Component {
         <Route path="/chats" render={(props) => {
           return <ChatCard />
         }} />
-        <Route path="/events" render={(props) => {
-          return <EventCard />
+        <Route path="/events/new" render={(props) => {
+          return <EventForm {...props} />
         }} />
+        <Route exact path="/events" render={(props) => {
+          return <EventList {...props} />
+        }} />
+        <Route exact path="/events/:eventId(\d+)" render={(props) => {
+          // Pass the eventId to the EventDetailComponent
+          return <EventDetail eventId={parseInt(props.match.params.eventId)} {...props} />
+        }} />
+        <Route
+          path="/events/:eventId(\d+)/edit" render={props => {
+            return <EventEditForm {...props} />
+          }}
+        />
         <Route path="/news" render={(props) => {
           return <NewsCard />
         }} />
