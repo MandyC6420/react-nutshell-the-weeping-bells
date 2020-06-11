@@ -55,42 +55,49 @@
     },
     {
       "id": 4,
+      "userId": 1,
       "task": "walk the emus",
       "completeBy": "06/12/2020",
-      "completed": false
+      "completed": true
     },
     {
       "id": 5,
+      "userId": 2,
       "task": "Eat the trash",
       "completeBy": "06/12/2020",
       "completed": true
     },
     {
       "task": "Vacuum the cats",
+      "userId": 2,
       "completeBy": "06/10/2020",
       "completed": true,
       "id": 7
     },
     {
       "task": "Vacuum the frogs",
+      "userId": 1,
       "completeBy": "06/12/2020",
       "completed": true,
       "id": 8
     },
     {
       "task": "Vacuum the dogs",
+      "userId": 2,
       "completeBy": "06/10/2020",
       "completed": false,
       "id": 10
     },
     {
       "task": "Vacuum the gerbils",
+      "userId": 1,
       "completeBy": "06/10/2020",
       "completed": false,
       "id": 11
     },
     {
       "task": "Eat the trash",
+      "userId": 2,
       "completeBy": "06/15/2020",
       "completed": false,
       "id": 12

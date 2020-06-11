@@ -9,6 +9,7 @@ import NewsCard from './news/NewsCard'
 import TaskList from './tasks/TaskList'
 import TaskForm from './tasks/TaskForm'
 import TaskEditForm from './tasks/TaskEditForm'
+import CompletedTaskList from './tasks/CompletedTaskList'
 
 
 class ApplicationViews extends Component {
@@ -34,9 +35,13 @@ class ApplicationViews extends Component {
         <Route exact path="/tasks/new" render={(props) => {
         return <TaskForm {...props} />
         }} />
-        <Route
+        <Route exact
         path="/tasks/:taskId(\d+)/edit" render={props => {
         return <TaskEditForm {...props} />
+        }}/>
+         <Route 
+        path="/tasks/completed" render={props => {
+        return <CompletedTaskList {...props} />
         }}
 />
       </React.Fragment>

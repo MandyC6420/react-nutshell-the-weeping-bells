@@ -33,5 +33,8 @@ export default {
             },
             body: JSON.stringify({ completed: true })
         }).then(r => r.json())
-    }
+    },
+    getAllCompleted() {
+        return fetch(`${remoteURL}/tasks?completed=true`).then(result => result.json())
+    },
 }

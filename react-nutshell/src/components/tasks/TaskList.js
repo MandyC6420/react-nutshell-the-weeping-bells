@@ -44,7 +44,14 @@ render(){
         onClick={() => {this.props.history.push("/tasks/new")}}>
       New Task
   </button>
+  {/* TODO: ROUTE TO A COMPLETED TASKS PAGE */}
+  <button type="button" className="btn"
+        onClick={() => {this.props.history.push("/tasks/completed")}}
+        >
+      View Completed Tasks
+  </button>
   <h1>Tasks To Complete</h1>
+ 
 </section>
       <div className="container-cards">
       {this.state.tasks.map(task =>
