@@ -37,4 +37,13 @@ export default {
     getAllCompleted() {
         return fetch(`${remoteURL}/tasks?completed=true`).then(result => result.json())
     },
+    incomplete(id) {
+        return fetch(`${remoteURL}/tasks/${id}`, {
+             method: "PATCH",
+             headers: {
+                 "Content-Type": "application/json"
+             },
+             body: JSON.stringify({ completed: false })
+         }).then(r => r.json())
+     },
 }

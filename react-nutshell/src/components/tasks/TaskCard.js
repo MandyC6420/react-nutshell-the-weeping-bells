@@ -4,7 +4,10 @@ import './TaskCard.css'
 
 class TaskCard extends Component {
   render() {
+      
+
     return (
+      
       
       <div className="card">
         <div className="card-content">
@@ -12,11 +15,22 @@ class TaskCard extends Component {
         type="button" onClick={() => {this.props.history.push(`/tasks/${this.props.task.id}/edit`)}}>
         {this.props.task.task}</button></span></h3>
           <p>Completion by:  {this.props.task.completeBy}</p>
+        
          <form>
-           <label>
-             Completed:
-           <input type="checkbox" name="checkbox" onChange={() => this.props.completeTask(this.props.task.id)}></input>
+           {
+             this.props.task.completed ?
+             <label>
+             incomplete:
+           <input type="checkbox" name="checkbox" onChange={() => this.props.incompleteTask(this.props.task.id)}></input>
            </label>
+           :
+           <label>
+           Completed:
+         <input type="checkbox" name="checkbox" onChange={() => this.props.completeTask(this.props.task.id)}></input>
+         </label>
+
+           }
+           
          </form>
         </div>
       </div>

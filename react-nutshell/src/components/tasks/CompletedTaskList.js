@@ -21,6 +21,17 @@ class CompletedTaskList extends Component {
     })
 }
 
+incompleteTask = id => {
+    TaskManager.incomplete(id)
+    .then(TaskManager.getAllCompleted)
+      .then((newTasks) => {
+        this.setState({
+            tasks: newTasks
+        })
+      })
+     
+}
+
 render(){
     console.log("completeTaskList: Render");
   
@@ -40,7 +51,7 @@ render(){
         <TaskCard
           key={task.id}
           task={task}
-          completedTask={this.completedTask}
+          incompleteTask={this.incompleteTask}
           {...this.props}
         />
       )}

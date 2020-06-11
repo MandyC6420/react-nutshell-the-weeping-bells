@@ -44,7 +44,7 @@
       "id": 2,
       "completeBy": "06/15/2020",
       "task": "Capstone proposal",
-      "completed": false
+      "completed": true
     },
     {
       "id": 3,
@@ -58,12 +58,12 @@
       "userId": 1,
       "task": "walk the emus",
       "completeBy": "06/12/2020",
-      "completed": true
+      "completed": false
     },
     {
       "id": 5,
-      "userId": 2,
-      "task": "Eat the trash",
+      "userId": 1,
+      "task": "Eat the grass",
       "completeBy": "06/12/2020",
       "completed": true
     },
@@ -75,11 +75,11 @@
       "id": 7
     },
     {
-      "task": "Vacuum the frogs",
+      "id": 8,
+      "task": "Vacuum the children",
       "userId": 1,
       "completeBy": "06/12/2020",
-      "completed": true,
-      "id": 8
+      "completed": false
     },
     {
       "task": "Vacuum the dogs",
@@ -101,19 +101,33 @@
       "completeBy": "06/15/2020",
       "completed": false,
       "id": 12
+    },
+    {
+      "task": "wash the computers",
+      "userId": 1,
+      "completeBy": "06/15/2020",
+      "completed": true,
+      "id": 13
+    },
+    {
+      "task": "waaaaaaaaaaaaaaaaaaaaaaa",
+      "userId": 2,
+      "completeBy": "06/15/2033",
+      "completed": false,
+      "id": 14
     }
   ],
   "messages": [
     {
       "id": 1,
       "userId": 1,
-      "message": "Hey, do you have the template for our proposals?",
+      "text": "Hey, do you have the template for our proposals?",
       "timestamp": "06/01/2020"
     },
     {
       "id": 2,
       "userId": 2,
-      "message": "Sure, let me send you a blank one",
+      "text": "Sure, let me send you a blank one",
       "timestamp": "06/01/2020"
     }
   ],
