@@ -1,78 +1,78 @@
 {
-    "users": [
-        {
-           "id": 1,
-           "username": "stephen1",
-           "password": "1234",
-           "name": "Stephen Avila" 
-        },
-        {
-            "id": 2,
-            "name": "Derek Stapleton",
-            "password": "boop2",
-            "username": "Sauron"
-        }
-    ],
-    "articles": [
-        {
-            "id": 1,
-            "title": "The Problem with Black Holes Solved",
-            "synopsis": "An Open Question About Black Holes Could Be Solved By Treating Them Like Holograms",
-            "url": "https://www.iflscience.com/physics/an-open-question-about-black-holes-could-be-solved-by-treating-them-like-holograms/",
-            "userId": 1,
-            "date": "06/04/2020"
-        },
-        {
-            "id": 2,
-            "date": "06/01/2020",
-            "synopsis": "Scientists belive they found the solution to building blocks for life",
-            "title": "Simulation Of Meteorite Impacts On Ancient Earth Yields Ingredients For Life",
-            "url": "https://www.iflscience.com/space/simulation-of-meteorite-impacts-on-ancient-earth-yields-ingredients-for-life/",
-            "userId": 2
-        }
-    ],
-    "tasks": [
-        {
-            "id": 1,
-            "userId": 1,
-            "task": "Walk the dog",
-            "completeBy": "06/10/2020"
-        },
-        {
-            "userId": 2,
-            "id": 2,
-            "completeBy": "06/15/2020",
-            "task": "Capstone proposal"
-        }
-    ],
-    "messages": [
-        {
-            "id": 1,
-            "userId": 1,
-            "message": "Hey, do you have the template for our proposals?",
-            "timestamp": "06/01/2020"
-        },
-        {
-            "id": 2,
-            "userId": 2,
-            "message": "Sure, let me send you a blank one",
-            "timestamp": "06/01/2020"
-        }
-    ],
-    "events": [
-        {
-            "id": 1,
-            "userId": 1,
-            "name": "Date Night",
-            "date": "06/12/2020",
-            "location": "The food place on 4th"
-        },
-        {
-            "userId": 2,
-            "id": 2,
-            "name": "Game Night",
-            "date": "06/09/2020",
-            "location": "Quicksilver"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "username": "stephen1",
+      "password": "1234",
+      "name": "Stephen Avila"
+    },
+    {
+      "id": 2,
+      "name": "Derek Stapleton",
+      "password": "boop2",
+      "username": "Sauron"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "The Problem with Black Holes Solved",
+      "synopsis": "An Open Question About Black Holes Could Be Solved By Treating Them Like Holograms",
+      "url": "https://www.iflscience.com/physics/an-open-question-about-black-holes-could-be-solved-by-treating-them-like-holograms/",
+      "userId": 1,
+      "date": "06/04/2020"
+    },
+    {
+      "id": 2,
+      "date": "06/01/2020",
+      "synopsis": "Scientists belive they found the solution to building blocks for life",
+      "title": "Simulation Of Meteorite Impacts On Ancient Earth Yields Ingredients For Life",
+      "url": "https://www.iflscience.com/space/simulation-of-meteorite-impacts-on-ancient-earth-yields-ingredients-for-life/",
+      "userId": 2
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "task": "Walk the dog",
+      "completeBy": "06/10/2020"
+    },
+    {
+      "userId": 2,
+      "id": 2,
+      "completeBy": "06/15/2020",
+      "task": "Capstone proposal"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "text": "Hey, do you have the template for our proposals??",
+      "userId": 1,
+      "timestamp": "06/11/2020"
+    },
+    {
+      "id": 2,
+      "text": "Sure, let me send you a blank one.",
+      "userId": 1,
+      "timestamp": "06/11/2020"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Date Night",
+      "date": "06/12/2020",
+      "location": "The food place on 4th"
+    },
+    {
+      "userId": 2,
+      "id": 2,
+      "name": "Game Night",
+      "date": "06/09/2020",
+      "location": "Quicksilver"
+    }
+  ]
 }
