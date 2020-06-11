@@ -24,7 +24,7 @@ class TaskEditForm extends Component {
         id: this.props.match.params.taskId,
         task: this.state.task,
         completeBy: this.state.completeBy,
-        complete: false
+        completed: false
       };
 
       TaskManager.update(editedTask)

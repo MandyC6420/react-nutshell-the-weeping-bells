@@ -52,6 +52,7 @@ render(){
           key={task.id}
           task={task}
           completeTask={this.completeTask}
+          {...this.props}
         />
       )}
       </div>

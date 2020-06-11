@@ -37,40 +37,33 @@
       "userId": 2,
       "task": "iron the ceiling",
       "completeBy": "06/10/2020",
-      "completed": "true"
+      "completed": false
     },
     {
       "userId": 2,
       "id": 2,
       "completeBy": "06/15/2020",
       "task": "Capstone proposal",
-      "completed": "true"
+      "completed": false
     },
     {
       "id": 3,
       "userId": 2,
       "task": "Vacuum the gerbils",
       "completeBy": "06/10/2020",
-      "completed": "true"
+      "completed": true
     },
     {
       "id": 4,
-      "userId": 1,
-      "task": "walk the emu",
+      "task": "walk the emus",
       "completeBy": "06/12/2020",
-      "completed": "true"
+      "completed": false
     },
     {
       "id": 5,
       "task": "Eat the trash",
       "completeBy": "06/12/2020",
       "completed": true
-    },
-    {
-      "task": "fhsdfjdaj",
-      "completeBy": "06/10/2020",
-      "completed": true,
-      "id": 6
     },
     {
       "task": "Vacuum the cats",
@@ -87,12 +80,6 @@
     {
       "task": "Vacuum the dogs",
       "completeBy": "06/10/2020",
-      "completed": true,
-      "id": 9
-    },
-    {
-      "task": "Vacuum the dogs",
-      "completeBy": "06/10/2020",
       "completed": false,
       "id": 10
     },
@@ -103,9 +90,9 @@
       "id": 11
     },
     {
-      "task": "Vacuum the dog",
-      "completeBy": "06/10/2020",
-      "completed": true,
+      "task": "Eat the trash",
+      "completeBy": "06/15/2020",
+      "completed": false,
       "id": 12
     }
   ],
