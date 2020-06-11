@@ -10,7 +10,7 @@ class CompletedTaskList extends Component {
         tasks: [],
     }
 
-   
+//    gets all tasks marked with a boolean of true from json
     componentDidMount(){
     //getAllcompleted from TaskManager and hang on to that data; put it in state
     TaskManager.getAllCompleted()
@@ -20,7 +20,7 @@ class CompletedTaskList extends Component {
         })
     })
 }
-
+// function that will allow me to change the boolean back to false to represent an incomplete task
 incompleteTask = id => {
     TaskManager.incomplete(id)
     .then(TaskManager.getAllCompleted)
@@ -36,6 +36,7 @@ render(){
     console.log("completeTaskList: Render");
   
     return(
+        // button to take you back to tasks you still have to do
         <>
         <section className="section-content">
         <button type="button" className="btn"
@@ -44,7 +45,7 @@ render(){
       View Tasks to Complete
   </button>
   <h1>Tasks Completed</h1>
- 
+ {/* loops through array to print tasks marked true and changed hte checkbox option from 'complete' to incomplete */}
 </section>
       <div className="container-cards">
       {this.state.tasks.map(task =>
