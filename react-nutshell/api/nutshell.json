@@ -34,19 +34,37 @@
   "tasks": [
     {
       "id": 1,
-      "userId": 1,
-      "task": "Walk the dog",
-      "completeBy": "06/10/2020"
+      "userId": 2,
+      "task": "iron the ceiling",
+      "completeBy": "06/10/2020",
+      "completed": false
     },
     {
       "userId": 2,
       "id": 2,
       "completeBy": "06/15/2020",
-      "task": "Capstone proposal"
+      "task": "Capstone proposal",
+      "completed": false
     },
     {
       "id": 3,
-      "task": "Take out the trash"
+      "userId": 2,
+      "task": "Vacuum the gerbils",
+      "completeBy": "06/10/2020",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "task": "walk the emu",
+      "completeBy": "06/12/2020",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "task": "Eat the trash",
+      "completeBy": "06/12/2020",
+      "complete": false
     }
   ],
   "messages": [

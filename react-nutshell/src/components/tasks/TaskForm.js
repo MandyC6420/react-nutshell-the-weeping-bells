@@ -6,6 +6,7 @@ class TaskForm extends Component {
     state = {
         task: "",
         completeBy: "",
+        complete: false,
         loadingStatus: false,
     };
 
@@ -26,6 +27,7 @@ class TaskForm extends Component {
             const task = {
                 task: this.state.task,
                 completeBy: this.state.completeBy,
+                complete: false
             };
 
             // Create the task and redirect user to task list
@@ -38,7 +40,7 @@ class TaskForm extends Component {
 
         return(
             <>
-            <form>
+            <form onSubmit={this.constructNewTask}>
                 <fieldset>
                     <div className="formgrid">
                         <input
@@ -60,7 +62,7 @@ class TaskForm extends Component {
                     </div>
                     <div className="alignRight">
                         <button
-                        type="button"
+                        type="submit"
                         disabled={this.state.loadingStatus}
                         onClick={this.constructNewTask}
                         >Submit</button>

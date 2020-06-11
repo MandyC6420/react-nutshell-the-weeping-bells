@@ -6,6 +6,8 @@ class TaskEditForm extends Component {
     //set the initial state
     state = {
       task: "",
+      completeBy: "",
+      complete: false,
       loadingStatus: true,
     };
 
@@ -21,6 +23,8 @@ class TaskEditForm extends Component {
       const editedTask = {
         id: this.props.match.params.taskId,
         task: this.state.task,
+        completeBy: this.state.completeBy,
+        complete: false
       };
 
       TaskManager.update(editedTask)
@@ -32,15 +36,18 @@ class TaskEditForm extends Component {
       .then(task => {
           this.setState({
             task: task.task,
+            completeBy: task.completeBy,
+            complete: false,
             loadingStatus: false,
           });
       });
     }
 
+
     render() {
       return (
         <>
-        <form>
+        <form onSubmit={this.updateExistingTask}>
           <fieldset>
             <div className="formgrid">
               <input
@@ -53,12 +60,13 @@ class TaskEditForm extends Component {
               />
               <label htmlFor="task">Task</label>
             </div>
+
             <div className="alignRight">
               <button
-                type="button" disabled={this.state.loadingStatus}
+                type="submit" disabled={this.state.loadingStatus}
                 onClick={this.updateExistingTask}
                 className="btn btn-primary"
-              >Submit</button>
+              >Save Changes</button>
             </div>
           </fieldset>
         </form>

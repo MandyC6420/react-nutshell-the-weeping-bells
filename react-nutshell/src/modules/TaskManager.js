@@ -24,5 +24,14 @@ update(editedTask) {
       },
       body: JSON.stringify(editedTask)
     }).then(data => data.json());
+  },
+  complete(completedTask) {
+    fetch(`${remoteURL}/tasks/${completedTask.id}`,{
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({completed: "false"})
+}); 
   }
 }
