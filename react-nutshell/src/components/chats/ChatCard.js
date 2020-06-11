@@ -1,15 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import ChatManager from "../../modules/ChatManager";
+import { Link } from "react-router-dom";
 
 class ChatCard extends Component {
   render() {
+    console.log(this.props.message);
     return (
       <div className="card">
         <div className="card-content">
-          {/* <picture>
-            <img src={require('./dog.svg')} alt="My Dog" />
-          </picture> */}
-          <h3>Name: <span className="card-petname">Suzie</span></h3>
-          <p>Message: It's awful hot, sure would like some ice cream!</p>
+          <h3>
+            Name: <span className="card-chatname">{this.props.message.id}</span>
+          </h3>
+          <p>
+            Message:{" "}
+            <span className="card-petname">{this.props.message.text}</span>
+          </p>
+          <button
+            type="button"
+            onClick={() => this.props.deleteMethodProp(this.props.message.id)}
+          >
+            Delete
+          </button>
+          <Link to={`/chats/${this.props.message.id}`}>
+            <button>Details</button>
+          </Link>
+          
         </div>
       </div>
     );
