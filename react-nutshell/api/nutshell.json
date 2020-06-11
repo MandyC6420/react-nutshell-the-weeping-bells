@@ -37,34 +37,76 @@
       "userId": 2,
       "task": "iron the ceiling",
       "completeBy": "06/10/2020",
-      "completed": false
+      "completed": "true"
     },
     {
       "userId": 2,
       "id": 2,
       "completeBy": "06/15/2020",
       "task": "Capstone proposal",
-      "completed": false
+      "completed": "true"
     },
     {
       "id": 3,
       "userId": 2,
       "task": "Vacuum the gerbils",
       "completeBy": "06/10/2020",
-      "completed": false
+      "completed": "true"
     },
     {
       "id": 4,
       "userId": 1,
       "task": "walk the emu",
       "completeBy": "06/12/2020",
-      "completed": false
+      "completed": "true"
     },
     {
       "id": 5,
       "task": "Eat the trash",
       "completeBy": "06/12/2020",
-      "complete": false
+      "completed": true
+    },
+    {
+      "task": "fhsdfjdaj",
+      "completeBy": "06/10/2020",
+      "completed": true,
+      "id": 6
+    },
+    {
+      "task": "Vacuum the cats",
+      "completeBy": "06/10/2020",
+      "completed": true,
+      "id": 7
+    },
+    {
+      "task": "Vacuum the frogs",
+      "completeBy": "06/12/2020",
+      "completed": true,
+      "id": 8
+    },
+    {
+      "task": "Vacuum the dogs",
+      "completeBy": "06/10/2020",
+      "completed": true,
+      "id": 9
+    },
+    {
+      "task": "Vacuum the dogs",
+      "completeBy": "06/10/2020",
+      "completed": false,
+      "id": 10
+    },
+    {
+      "task": "Vacuum the gerbils",
+      "completeBy": "06/10/2020",
+      "completed": false,
+      "id": 11
+    },
+    {
+      "task": "Vacuum the dog",
+      "completeBy": "06/10/2020",
+      "completed": true,
+      "id": 12
     }
   ],
   "messages": [

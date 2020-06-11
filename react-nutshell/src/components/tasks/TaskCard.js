@@ -15,7 +15,7 @@ class TaskCard extends Component {
          <form>
            <label>
              Completed:
-           <input type="checkbox" name="completed" />
+           <input type="checkbox" name="checkbox" onChange={() => this.props.completeTask(this.props.task.id)}></input>
            </label>
          </form>
         </div>

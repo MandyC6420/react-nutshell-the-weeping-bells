@@ -27,7 +27,7 @@ class TaskForm extends Component {
             const task = {
                 task: this.state.task,
                 completeBy: this.state.completeBy,
-                complete: false
+                completed: false
             };
 
             // Create the task and redirect user to task list

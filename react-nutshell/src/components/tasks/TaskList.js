@@ -10,6 +10,9 @@ class TaskList extends Component {
         tasks: [],
     }
 
+   
+      
+
 componentDidMount(){
     //getAll from TaskManager and hang on to that data; put it in state
     TaskManager.getAll()
@@ -18,6 +21,17 @@ componentDidMount(){
             tasks: tasks
         })
     })
+}
+
+completeTask = id => {
+    TaskManager.complete(id)
+    .then(TaskManager.getAll)
+      .then((newTasks) => {
+        this.setState({
+            tasks: newTasks
+        })
+      })
+     
 }
 
 render(){
@@ -33,9 +47,13 @@ render(){
   <h1>Tasks To Complete</h1>
 </section>
       <div className="container-cards">
-        {this.state.tasks.map(task =>
-          <TaskCard key={task.id} task={task} {...this.props} />
-        )}
+      {this.state.tasks.map(task =>
+        <TaskCard
+          key={task.id}
+          task={task}
+          completeTask={this.completeTask}
+        />
+      )}
       </div>
       </>
     )
