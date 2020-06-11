@@ -11,6 +11,12 @@
       "name": "Derek Stapleton",
       "password": "boop2",
       "username": "Sauron"
+    },
+    {
+      "username": "username1",
+      "password": "123456",
+      "name": "Jason Bourne",
+      "id": 3
     }
   ],
   "articles": [
@@ -61,7 +67,7 @@
   ],
   "events": [
     {
-      "userId": 2,
+      "userId": 3,
       "id": 2,
       "name": "Game Night",
       "date": "06/09/2020",
