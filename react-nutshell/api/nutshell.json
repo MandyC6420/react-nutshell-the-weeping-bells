@@ -48,8 +48,8 @@
   "messages": [
     {
       "id": 1,
-      "text": "Hey, do you have the template for our proposals??",
       "userId": 1,
+      "text": "Hey, do you have the template for our proposals?",
       "timestamp": "06/11/2020"
     },
     {

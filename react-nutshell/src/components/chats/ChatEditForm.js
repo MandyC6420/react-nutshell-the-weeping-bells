@@ -1,48 +1,47 @@
-import React, { Component } from "react"
-import ChatManager from "../../modules/ChatManager"
-import "./ChatEditForm.css"
+import React, { Component } from "react";
+import ChatManager from "../../modules/ChatManager";
+// import "./ChatEditForm.css"
 
 class ChatEditForm extends Component {
-    //set the initial state
-    state = {
-      animalName: "",
-      breed: "",
-      loadingStatus: true,
+  //set the initial state
+  state = {
+    text: "",
+    loadingStatus: true,
+  };
+
+  handleFieldChange = (evt) => {
+    const stateToChange = {};
+    stateToChange[evt.target.id] = evt.target.value;
+    this.setState(stateToChange);
+  };
+
+  updateExistingChat = (evt) => {
+    evt.preventDefault();
+    this.setState({ loadingStatus: true });
+    const editedchat = {
+      id: this.props.match.params.chatId,
+      userId: 1,
+      text: this.state.text,
+      timestamp: "06/11/2020",
     };
 
-    handleFieldChange = evt => {
-      const stateToChange = {}
-      stateToChange[evt.target.id] = evt.target.value
-      this.setState(stateToChange)
-    }
+    ChatManager.update(editedchat).then(() =>
+      this.props.history.push("/chats")
+    );
+  };
 
-    updateExistingAnimal = evt => {
-      evt.preventDefault()
-      this.setState({ loadingStatus: true });
-      const editedchat = {
-        id: this.props.match.params.animalId,
-        name: this.state.animalName,
-        breed: this.state.breed
-      };
-
-      ChatManager.update(editedmessage)
-      .then(() => this.props.history.push("/messages"))
-    }
-
-    componentDidMount() {
-      ChatManager.get(this.props.match.params.chatId)
-      .then(animal => {
-          this.setState({
-            animalName: animal.name,
-            breed: animal.breed,
-            loadingStatus: false,
-          });
+  componentDidMount() {
+    ChatManager.get(this.props.match.params.chatId).then((message) => {
+      this.setState({
+        text: message.text,
+        loadingStatus: false,
       });
-    }
+    });
+  }
 
-    render() {
-      return (
-        <>
+  render() {
+    return (
+      <>
         <form>
           <fieldset>
             <div className="formgrid">
@@ -51,33 +50,26 @@ class ChatEditForm extends Component {
                 required
                 className="form-control"
                 onChange={this.handleFieldChange}
-                id="animalName"
-                value={this.state.animalName}
+                id="text"
+                value={this.state.text}
               />
-              <label htmlFor="animalName">Animal name</label>
-
-              <input
-                type="text"
-                required
-                className="form-control"
-                onChange={this.handleFieldChange}
-                id="breed"
-                value={this.state.breed}
-              />
-              <label htmlFor="breed">Breed</label>
+              <label htmlFor="text"></label>
             </div>
             <div className="alignRight">
               <button
-                type="button" disabled={this.state.loadingStatus}
-                onClick={this.updateExistingAnimal}
+                type="button"
+                disabled={this.state.loadingStatus}
+                onClick={this.updateExistingChat}
                 className="btn btn-primary"
-              >Submit</button>
+              >
+                Submit
+              </button>
             </div>
           </fieldset>
         </form>
-        </>
-      );
-    }
+      </>
+    );
+  }
 }
 
-export default ChatEditForm
+export default ChatEditForm;
