@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from "react-router-dom"
 import React, { Component } from 'react'
 import Home from './home/Home'
 import ChatCard from './chats/ChatCard'
@@ -9,15 +9,29 @@ import TaskCard from './tasks/TaskCard'
 import EventDetail from './events/EventDetail'
 import EventForm from './events/EventForm'
 import EventEditForm from './events/EventEditForm'
+import Login from './auth/Login'
+import UserForm from './users/UserForm'
 
 
 class ApplicationViews extends Component {
+
+  // Check if credentials are in local storage
+  //returns true/false
+  isAuthenticated = () => localStorage.getItem("credentials") !== null
+
 
   render() {
     return (
       <React.Fragment>
         <Route exact path="/" render={(props) => {
-          return <Home />
+          if (this.isAuthenticated()) {
+            return <Home {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
+        }} />
+        <Route path="/users/new" render={(props) => {
+          return <UserForm {...props} />
         }} />
         <Route path="/chats" render={(props) => {
           return <ChatCard />
@@ -25,8 +39,12 @@ class ApplicationViews extends Component {
         <Route path="/events/new" render={(props) => {
           return <EventForm {...props} />
         }} />
-        <Route exact path="/events" render={(props) => {
-          return <EventList {...props} />
+        <Route exact path="/events" render={props => {
+          if (this.isAuthenticated()) {
+            return <EventList {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
         <Route exact path="/events/:eventId(\d+)" render={(props) => {
           // Pass the eventId to the EventDetailComponent
@@ -43,6 +61,7 @@ class ApplicationViews extends Component {
         <Route path="/tasks" render={(props) => {
           return <TaskCard />
         }} />
+        <Route path="/login" component={Login} />
       </React.Fragment>
     )
   }
