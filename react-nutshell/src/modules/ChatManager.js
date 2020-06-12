@@ -21,7 +21,17 @@ export default {
       },
       body: JSON.stringify(editedmessages)
     }).then(data => data.json());
-  }
+  },
+  post(newChat) {
+    return fetch(`${remoteURL}/messages`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newChat)
+    }).then(data => data.json())
+}
+
 }
 
 

@@ -8,14 +8,14 @@ import TaskCard from "./tasks/TaskCard";
 import ChatDetail from "./chats/ChatDetail";
 import ChatEditForm from "./chats/ChatEditForm";
 // import ChatCard from './chats/ChatCard'
-import NewsList from './news/NewsList'
-import NewsForm from './news/NewsForm'
-import NewsEditForm from './news/NewsEditForm'
-import TaskList from './tasks/TaskList'
-import TaskForm from './tasks/TaskForm'
-import TaskEditForm from './tasks/TaskEditForm'
-import CompletedTaskList from './tasks/CompletedTaskList'
-
+import NewsList from "./news/NewsList";
+import NewsForm from "./news/NewsForm";
+import NewsEditForm from "./news/NewsEditForm";
+import TaskList from "./tasks/TaskList";
+import TaskForm from "./tasks/TaskForm";
+import TaskEditForm from "./tasks/TaskEditForm";
+import CompletedTaskList from "./tasks/CompletedTaskList";
+import ChatForm from "./chats/ChatForm";
 
 class ApplicationViews extends Component {
   // Check if credentials are in local storage
@@ -34,6 +34,13 @@ class ApplicationViews extends Component {
             return <Home />;
           }}
         />
+
+        <Route
+          path="/chats/new"
+          render={(props) => {
+            return <ChatForm {...props} />;
+          }}
+        />
         <Route
           exact
           path="/chats"
@@ -47,7 +54,7 @@ class ApplicationViews extends Component {
             return <ChatEditForm {...props} />;
           }}
         />
-        
+
         <Route
           exact
           path="/chats/:chatId(\d+)"
@@ -61,59 +68,88 @@ class ApplicationViews extends Component {
             );
           }}
         />
-        
+
         <Route
           path="/events"
           render={(props) => {
             return <EventCard />;
           }}
         />
-        
+
         <Route
           path="/news"
           render={(props) => {
             return <NewsCard />;
           }}
         />
-        
+
         <Route
           path="/tasks"
           render={(props) => {
             return <TaskCard />;
           }}
         />
-        <Route exact path="/" render={(props) => {
-          return <Home />
-        }} />
-        
-        <Route path="/events" render={(props) => {
-          return <EventCard />
-        }} />
-        <Route exact path="/news" render={(props) => {
-          return <NewsList {...props} />
-        }} />
-        <Route exact path="/tasks" render={(props) => {
-          return <TaskList {...props}/>
-        }} />
-        <Route exact path="/news/new" render={(props) => {
-          return <NewsForm {...props} />
-        }} />
-        <Route path="/news/:newsId(\d+)/edit" render={props => {
-          return <NewsEditForm {...props} />
-        }}
+        <Route
+          exact
+          path="/"
+          render={(props) => {
+            return <Home />;
+          }}
         />
-        <Route exact path="/tasks/new" render={(props) => {
-        return <TaskForm {...props} />
-        }} />
-        <Route exact
-        path="/tasks/:taskId(\d+)/edit" render={props => {
-        return <TaskEditForm {...props} />
-        }}/>
-         <Route 
-        path="/tasks/completed" render={props => {
-        return <CompletedTaskList {...props} />
-        }}
-/>
+
+        <Route
+          path="/events"
+          render={(props) => {
+            return <EventCard />;
+          }}
+        />
+        <Route
+          exact
+          path="/news"
+          render={(props) => {
+            return <NewsList {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/tasks"
+          render={(props) => {
+            return <TaskList {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/news/new"
+          render={(props) => {
+            return <NewsForm {...props} />;
+          }}
+        />
+        <Route
+          path="/news/:newsId(\d+)/edit"
+          render={(props) => {
+            return <NewsEditForm {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/tasks/new"
+          render={(props) => {
+            return <TaskForm {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/tasks/:taskId(\d+)/edit"
+          render={(props) => {
+            return <TaskEditForm {...props} />;
+          }}
+        />
+        <Route
+          path="/tasks/completed"
+          render={(props) => {
+            return <CompletedTaskList {...props} />;
+          }}
+        />
       </React.Fragment>
     );
   }

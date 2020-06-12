@@ -45,6 +45,13 @@ render(){
             deleteMethodProp={this.deleteMethodInChatList}
           />
         )}
+        <section className="section-content">
+  <button type="button"
+      className="btn"
+      onClick={() => {this.props.history.push("/chats/new")}}>
+      Send New Message
+  </button>
+</section>
       </div>
 
     )
