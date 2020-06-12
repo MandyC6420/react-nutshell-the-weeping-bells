@@ -5,20 +5,16 @@ import ChatCard from './chats/ChatCard'
 //only include these once they are built - previous practice exercise
 import EventList from './events/EventList'
 import NewsCard from './news/NewsCard'
-<<<<<<< HEAD
-import TaskCard from './tasks/TaskCard'
 import EventDetail from './events/EventDetail'
 import EventForm from './events/EventForm'
 import EventEditForm from './events/EventEditForm'
 import Login from './auth/Login'
 import UserForm from './users/UserForm'
-=======
 // import TaskCard from './tasks/TaskCard'
 import TaskList from './tasks/TaskList'
 import TaskForm from './tasks/TaskForm'
 import TaskEditForm from './tasks/TaskEditForm'
 import CompletedTaskList from './tasks/CompletedTaskList'
->>>>>>> master
 
 
 class ApplicationViews extends Component {
@@ -66,12 +62,14 @@ class ApplicationViews extends Component {
         <Route path="/news" render={(props) => {
           return <NewsCard />
         }} />
-        <Route exact path="/tasks" render={(props) => {
-          return <TaskList {...props}/>
+        <Route exact path="/tasks" render={props => {
+          if (this.isAuthenticated()) {
+            return <TaskList {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
-<<<<<<< HEAD
         <Route path="/login" component={Login} />
-=======
         <Route exact path="/tasks/new" render={(props) => {
         return <TaskForm {...props} />
         }} />
@@ -84,7 +82,6 @@ class ApplicationViews extends Component {
         return <CompletedTaskList {...props} />
         }}
 />
->>>>>>> master
       </React.Fragment>
     )
   }
