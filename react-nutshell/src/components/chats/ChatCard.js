@@ -7,13 +7,13 @@ class ChatCard extends Component {
     console.log(this.props.message);
     return (
       <div className="card">
-        <div className="card-content">
+        <div className="card-content1">
           <h3>
             Name: <span className="card-chatname">{this.props.message.id}</span>
           </h3>
           <p>
             Message:{" "}
-            <span className="card-petname">{this.props.message.text}</span>
+            <span className="card-petname1">{this.props.message.text}</span>
           </p>
           <button
             type="button"
