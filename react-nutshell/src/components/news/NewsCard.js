@@ -6,8 +6,13 @@ class NewsCard extends Component {
       <div className="card">
         <div className="card-content">
           
-          <h3>News Title: <span className="card-newsTitle">Doodles</span></h3>
-          <p>Breed: Poodle</p>
+          <h3><span className="card-newstitle">{this.props.news.title}</span></h3>
+          <p>Synopsis: {this.props.news.synopsis}</p>
+          <a href={this.props.news.url}><p>{this.props.news.url}</p></a>
+          <p>{this.props.news.date}</p>
+          <button type="button" onClick={() => this.props.deleteNews(this.props.news.id)}>Delete</button>
+          <button type="button"
+        onClick={() => {this.props.history.push(`/news/${this.props.news.id}/edit`)}}>Edit</button>
         </div>
       </div>
     );
