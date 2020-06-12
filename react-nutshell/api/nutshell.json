@@ -119,14 +119,19 @@
     {
       "id": 1,
       "userId": 1,
-      "text": "Hey, do you have the template for our proposals?",
-      "timestamp": "06/01/2020"
+      "text": "Hey, do you have the template for our proposals?????",
+      "timestamp": "06/11/2020"
     },
     {
       "id": 2,
-      "userId": 2,
-      "text": "Sure, let me send you a blank one",
-      "timestamp": "06/01/2020"
+      "text": "Sure, let me send you a blank one.",
+      "userId": 1,
+      "timestamp": "06/11/2020"
+    },
+    {
+      "userId": "Mandy",
+      "text": "Thank YOU LINDSEY!!!!!",
+      "id": 3
     }
   ],
   "events": [
