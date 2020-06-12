@@ -40,28 +40,99 @@
   "tasks": [
     {
       "id": 1,
-      "userId": 1,
-      "task": "Walk the dog",
-      "completeBy": "06/10/2020"
+      "userId": 2,
+      "task": "iron the ceiling",
+      "completeBy": "06/10/2020",
+      "completed": false
     },
     {
       "userId": 2,
       "id": 2,
       "completeBy": "06/15/2020",
-      "task": "Capstone proposal"
+      "task": "Capstone proposal",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "task": "Vacuum the gerbils",
+      "completeBy": "06/10/2020",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "task": "walk the emus",
+      "completeBy": "06/12/2020",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "task": "Eat the grass",
+      "completeBy": "06/12/2020",
+      "completed": true
+    },
+    {
+      "task": "Vacuum the cats",
+      "userId": 2,
+      "completeBy": "06/10/2020",
+      "completed": true,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "task": "Vacuum the children",
+      "userId": 1,
+      "completeBy": "06/12/2020",
+      "completed": false
+    },
+    {
+      "task": "Vacuum the dogs",
+      "userId": 2,
+      "completeBy": "06/10/2020",
+      "completed": false,
+      "id": 10
+    },
+    {
+      "task": "Vacuum the gerbils",
+      "userId": 1,
+      "completeBy": "06/10/2020",
+      "completed": false,
+      "id": 11
+    },
+    {
+      "task": "Eat the trash",
+      "userId": 2,
+      "completeBy": "06/15/2020",
+      "completed": false,
+      "id": 12
+    },
+    {
+      "task": "wash the computers",
+      "userId": 1,
+      "completeBy": "06/15/2020",
+      "completed": true,
+      "id": 13
+    },
+    {
+      "task": "swiffer the fish",
+      "completeBy": "06/15/2033",
+      "completed": false,
+      "id": 14
     }
   ],
   "messages": [
     {
       "id": 1,
       "userId": 1,
-      "message": "Hey, do you have the template for our proposals?",
+      "text": "Hey, do you have the template for our proposals?",
       "timestamp": "06/01/2020"
     },
     {
       "id": 2,
       "userId": 2,
-      "message": "Sure, let me send you a blank one",
+      "text": "Sure, let me send you a blank one",
       "timestamp": "06/01/2020"
     }
   ],
