@@ -8,12 +8,12 @@ import EventDetail from './events/EventDetail'
 import EventForm from './events/EventForm'
 import EventEditForm from './events/EventEditForm'
 import NewsList from './news/NewsList'
-import NewsDetail from './news/NewsDetail'
+
 import NewsForm from './news/NewsForm'
-import NewsEditForm from './newss/NewsEditForm'
+import NewsEditForm from './news/NewsEditForm'
 import Login from './auth/Login'
 import UserForm from './users/UserForm'
-// import TaskCard from './tasks/TaskCard'
+
 import TaskList from './tasks/TaskList'
 import TaskForm from './tasks/TaskForm'
 import TaskEditForm from './tasks/TaskEditForm'
@@ -72,7 +72,7 @@ class ApplicationViews extends Component {
           return <NewsForm {...props} />
         }} />
 
-        <Route exact path="/newss" render={props => {
+        <Route exact path="/news" render={props => {
           if (this.isAuthenticated()) {
             return <NewsList {...props} />
           } else {
@@ -80,13 +80,10 @@ class ApplicationViews extends Component {
           }
         }} />
 
-        <Route exact path="/news/:newsId(\d+)" render={(props) => {
-          // Pass the newsId to the NewsDetailComponent
-          return <NewsDetail newsId={parseInt(props.match.params.newsId)} {...props} />
-        }} />
+      
 
         <Route
-          path="/newss/:newsId(\d+)/edit" render={props => {
+          path="/news/:newsId(\d+)/edit" render={props => {
             return <NewsEditForm {...props} />
           }}
         />
