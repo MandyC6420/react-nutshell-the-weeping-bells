@@ -5,7 +5,7 @@ import "./NewsForm.css"
 class NewsEditForm extends Component {
     //set the initial state
     state = {
-        newsTitle: "",
+        title: "",
         synopsis: "",
         url: "",
         date: "",
@@ -23,7 +23,7 @@ class NewsEditForm extends Component {
         this.setState({ loadingStatus: true });
         const editedNews = {
             id: this.props.match.params.newsId,
-            title: this.state.newsTitle,
+            title: this.state.title,
             synopsis: this.state.synopsis,
             url: this.state.url,
             date: this.state.date,
@@ -59,7 +59,7 @@ class NewsEditForm extends Component {
                                 required
                                 className="form-control"
                                 onChange={this.handleFieldChange}
-                                id="newsTitle"
+                                id="title"
                                 value={this.state.title}
                             />
                             <label htmlFor="newsTitle">News Title</label>
