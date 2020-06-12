@@ -7,6 +7,10 @@ import NewsCard from "./news/NewsCard";
 import TaskCard from "./tasks/TaskCard";
 import ChatDetail from "./chats/ChatDetail";
 import ChatEditForm from "./chats/ChatEditForm";
+// import ChatCard from './chats/ChatCard'
+import NewsList from './news/NewsList'
+import NewsForm from './news/NewsForm'
+import NewsEditForm from './news/NewsEditForm'
 import TaskList from './tasks/TaskList'
 import TaskForm from './tasks/TaskForm'
 import TaskEditForm from './tasks/TaskEditForm'
@@ -85,12 +89,19 @@ class ApplicationViews extends Component {
         <Route path="/events" render={(props) => {
           return <EventCard />
         }} />
-        <Route path="/news" render={(props) => {
-          return <NewsCard />
+        <Route exact path="/news" render={(props) => {
+          return <NewsList {...props} />
         }} />
         <Route exact path="/tasks" render={(props) => {
           return <TaskList {...props}/>
         }} />
+        <Route exact path="/news/new" render={(props) => {
+          return <NewsForm {...props} />
+        }} />
+        <Route path="/news/:newsId(\d+)/edit" render={props => {
+          return <NewsEditForm {...props} />
+        }}
+        />
         <Route exact path="/tasks/new" render={(props) => {
         return <TaskForm {...props} />
         }} />
