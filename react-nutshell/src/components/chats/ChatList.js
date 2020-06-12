@@ -41,6 +41,7 @@ render(){
           <ChatCard
             key={message.id}
             message={message}
+            
             deleteMethodProp={this.deleteMethodInChatList}
           />
         )}

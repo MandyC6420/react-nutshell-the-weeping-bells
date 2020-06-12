@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ChatManager from "../../modules/ChatManager";
+// import ChatManager from "../../modules/ChatManager";
 import { Link } from "react-router-dom";
 
 class ChatCard extends Component {
@@ -7,13 +7,13 @@ class ChatCard extends Component {
     console.log(this.props.message);
     return (
       <div className="card">
-        <div className="card-content1">
+        <div className="card-content">
           <h3>
             Name: <span className="card-chatname">{this.props.message.id}</span>
           </h3>
           <p>
             Message:{" "}
-            <span className="card-petname1">{this.props.message.text}</span>
+            <span className="card-chatname">{this.props.message.text}</span>
           </p>
           <button
             type="button"
