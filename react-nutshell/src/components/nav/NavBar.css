@@ -3,12 +3,12 @@ small {
   }
   
   header {
-    background-color:darkblue;
-    border: cornflowerblue solid 3px;
+    background-color:rgba(0, 0, 0, 0.9);
+    border: rgba(0, 0, 0, 0) solid 3px;
   }
   
   .site-title {
-    color: ghostwhite;
+    color: rgb(251, 247, 9);
     text-align: center;
   }
   
@@ -23,9 +23,9 @@ small {
     padding: 10px;
     text-align: center;
     font-size: 1.5em;
-    color: cornsilk;
+    color: rgb(238, 215, 123);
     box-sizing: border-box;
-    background-color: cornflowerblue;
+    background-color: rgb(0, 0, 0);
     list-style-type: none;
   }
   
@@ -34,5 +34,5 @@ small {
   }
   
   nav .container a:hover {
-    color: maroon;
+    color: rgb(0, 0, 0);
   }
