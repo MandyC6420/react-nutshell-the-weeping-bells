@@ -6,12 +6,14 @@ import './Nutshell.css'
 
 
 
+
 class Nutshell extends Component {
 	render() {
 	  return (
 		<>
 		  <NavBar />
 		  <ApplicationViews />
+		 
 		</>
 	  )
 	}
